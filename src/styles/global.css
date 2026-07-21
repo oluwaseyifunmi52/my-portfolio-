@@ -1,0 +1,136 @@
+:root,
+:root[data-theme="dark"],
+:root[data-theme="light"] {
+    --bg: #08090b;
+    --bg-soft: #0d0e11;
+    --panel: #121317;
+    --panel-strong: #191a1f;
+    --ink: #f7efe8;
+    --ink-muted: #b9aaa0;
+    --ink-faint: #7d7068;
+    --line: #2b2521;
+    --accent: #ff6b1a;
+    --accent-deep: #cf4b12;
+    --accent-soft: rgba(255, 107, 26, .14);
+    --shadow: rgba(0, 0, 0, .38);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--ink);
+}
+
+h5 {
+    color: var(--accent);
+    letter-spacing: 0.08em;
+}
+
+.display {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+section {
+    padding: 80px 0;
+    border-top: 1px solid var(--line);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 24px;
+    border-radius: 2px;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border: 1px solid var(--line);
+    transition: all 0.25s;
+    cursor: pointer;
+    background: transparent;
+    color: var(--ink);
+    font-family: inherit;
+}
+
+.btn-primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--ink);
+    font-weight: 700;
+}
+
+.btn-ghost {
+    color: var(--ink-muted);
+}
+
+.btn-ghost:hover {
+    color: var(--ink);
+    border-color: var(--accent);
+}
+
+.theme-toggle {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1200;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--panel-strong);
+    color: var(--accent);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 16px 30px var(--shadow);
+    transition: .3s;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    background: var(--accent-soft);
+}
+.main-content {
+    margin-left: 280px;
+    width: calc(100% - 280px);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+@media (max-width: 900px) {
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
