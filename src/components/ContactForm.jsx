@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { sendMessage } from "../services/contactServices";
+import { sendMessage } from "../services/contactServices.js";
 
 export default function ContactForm() {
     const [formData, setFormData] = useState({
@@ -8,6 +8,8 @@ export default function ContactForm() {
         subject: "",
         message: "",
     });
+
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
         setFormData({
@@ -20,9 +22,14 @@ export default function ContactForm() {
         e.preventDefault();
 
         try {
+            setLoading(true);
+
             const response = await sendMessage(formData);
 
-            alert(response.message || "Message sent successfully!");
+            alert(
+                response.message ||
+                "Message sent successfully!"
+            );
 
             setFormData({
                 name: "",
@@ -31,7 +38,12 @@ export default function ContactForm() {
                 message: "",
             });
         } catch (error) {
-            alert(error.message || "Failed to send message.");
+            alert(
+                error.message ||
+                "Failed to send message."
+            );
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -73,8 +85,13 @@ export default function ContactForm() {
                 required
             />
 
-            <button type="submit">
-                Send Message
+            <button
+                type="submit"
+                disabled={loading}
+            >
+                {loading
+                    ? "Sending..."
+                    : "Send Message"}
             </button>
         </form>
     );
