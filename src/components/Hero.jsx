@@ -18,7 +18,7 @@ export default function Hero() {
                 </p>
 
                 <h1>
-                    Abayomi <span>Oluwaseyi</span>
+                    Oluwaseyi <span>Abayomi</span>
                 </h1>
 
                 <h2>
