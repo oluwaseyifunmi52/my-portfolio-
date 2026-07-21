@@ -1,7 +1,7 @@
 import royal from "../assets/royal.png";
-import voting from "../assets/online voting.jpeg";
-import portfolio from "../assets/portfolio.png";
+import voting from "../assets/online-voting.jpeg";
 
+import portfolio from "../assets/portfolio.png";
 import solar from "../assets/solar.jpeg";
 import electrical from "../assets/electrical.jpeg";
 import installation from "../assets/installation.mp4";
