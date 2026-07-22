@@ -1,6 +1,6 @@
 const BASE_URL = "https://my-portfolio-back-end-l6w2.onrender.com/api";
 
-const TIMEOUT_MS = 20000; // 20s — covers Render free-tier cold starts
+const TIMEOUT_MS = 60000; // 60s — covers Render free-tier cold starts
 
 export const apiRequest = async (endpoint, options = {}) => {
     const controller = new AbortController();
@@ -41,7 +41,7 @@ export const apiRequest = async (endpoint, options = {}) => {
 
         if (error.name === "AbortError") {
             throw new Error(
-                "The server took too long to respond. It may be waking up — please try again in a few seconds."
+                "The server is taking longer than expected to respond. Please try again."
             );
         }
 
