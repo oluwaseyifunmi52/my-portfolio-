@@ -22,7 +22,7 @@ export default function Hero() {
                 </h1>
 
                 <h2>
-                    Full Stack Developer | Electrical & Electronics Engineer | Solar Installation Specialist
+                    Full Stack Developer | Electrical &  Solar Installation Specialist
                 </h2>
 
                 

@@ -19,12 +19,12 @@ export default function About() {
                     <h5>ABOUT ME</h5>
 
                     <h2>
-                        Full Stack Developer | Electrical & Electronics Engineer | Solar Installation Specialist
+                        Full Stack Developer | Electrical & Solar Installation Specialist
                     </h2>
                     <p>
                         I'm <strong>Oluwaseyi Abayomi</strong>, a passionate
                         <strong> Full Stack Developer</strong>,
-                        <strong> Electrical & Electronics Engineer</strong>, and
+                        <strong> Electrical & </strong>, and
                         <strong> Solar Installation Specialist</strong> dedicated to creating
                         innovative digital products and reliable engineering solutions. I enjoy
                         transforming ideas into <strong>practical, user-friendly applications</strong>
@@ -78,7 +78,7 @@ export default function About() {
                         <div>
                             <span>Specialization</span>
                             <p>
-                                Full Stack Development, Electrical Engineering & Solar Energy
+                                Full Stack Development, Electrical & Solar Energy
                             </p>
                         </div>
 
