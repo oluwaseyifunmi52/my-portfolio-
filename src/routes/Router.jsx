@@ -4,10 +4,12 @@ import Home from "../pages/Home";
 import ProjectDetails from "../pages/ProjectDetails";
 import NotFound from "../pages/NotFound";
 import Resume from "../pages/Resume";
+import FloatingThemeToggle from "../components/FloatingThemeToggle";
 
 export default function Router() {
     return (
         <BrowserRouter>
+            <FloatingThemeToggle />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/project/:id" element={<ProjectDetails />} />

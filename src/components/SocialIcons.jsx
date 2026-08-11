@@ -1,10 +1,8 @@
 import {
     FaGithub,
-     FaLinkedin,
-     FaInstagram,
-    FaFacebook,
-    FaEnvelope,   
-    FaWhatsapp,   
+    FaLinkedin,
+    FaEnvelope,
+    FaWhatsapp,
 } from "react-icons/fa";
 
 export default function SocialIcons() {
@@ -14,52 +12,36 @@ export default function SocialIcons() {
             <a
                 href="https://github.com/oluwaseyifunmi52"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
             >
                 <FaGithub />
             </a>
 
-              <a
-        href="mailto:oluwaseyifunmioluwadami@gmail.com"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Email"
-    >
-        <FaEnvelope />
-    </a>
-
-    <a
-        href="https://wa.me/2347064840014"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="WhatsApp"
-    >
-        <FaWhatsapp />
-    </a>
-
-            {/* <a
-                href="https://linkedin.com/in/yourusername"
+            <a
+                href="https://linkedin.com/in/oluwaseyi-abayomi"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
             >
                 <FaLinkedin />
-            </a> */}
+            </a>
 
-            {/* <a
-                href="https://instagram.com/yourusername"
-                target="_blank"
-                rel="noreferrer"
+            <a
+                href="mailto:oluwaseyifunmioluwadami@gmail.com"
+                aria-label="Email"
             >
-                <FaInstagram />
-            </a> */}
+                <FaEnvelope />
+            </a>
 
-            {/* <a
-                href="https://facebook.com/yourusername"
+            <a
+                href="https://wa.me/2347084640014"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
             >
-                <FaFacebook />
-            </a> */}
+                <FaWhatsapp />
+            </a>
 
         </div>
     );

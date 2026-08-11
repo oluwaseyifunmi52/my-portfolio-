@@ -4,7 +4,81 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+
+    <!-- Prevent flash of wrong theme -->
+    <script>
+      (function() {
+        var savedTheme = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var theme = savedTheme || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+
+    <!-- Primary SEO -->
+    <title>Oluwaseyi Abayomi Emmanuel | Junior Full-Stack Web Developer</title>
+    <meta name="title" content="Oluwaseyi Abayomi Emmanuel | Junior Full-Stack Web Developer" />
+    <meta name="description" content="Junior Full-Stack Web Developer specializing in the MERN stack (React, Node.js, Express, MongoDB). Building practical, deployable applications. Open to remote and Ibadan-based opportunities." />
+    <meta name="keywords" content="Junior Full-Stack Developer, MERN Stack, React Developer, Node.js Developer, JavaScript Developer, Web Developer, Ibadan, Nigeria, Remote Developer" />
+    <meta name="author" content="Oluwaseyi Abayomi Emmanuel" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://oluwaseyi-abayomi.vercel.app/" />
+    <meta property="og:title" content="Oluwaseyi Abayomi Emmanuel | Junior Full-Stack Web Developer" />
+    <meta property="og:description" content="Junior Full-Stack Web Developer specializing in the MERN stack. Building practical, deployable applications. Open to opportunities." />
+    <meta property="og:image" content="https://oluwaseyi-abayomi.vercel.app/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://oluwaseyi-abayomi.vercel.app/" />
+    <meta property="twitter:title" content="Oluwaseyi Abayomi Emmanuel | Junior Full-Stack Web Developer" />
+    <meta property="twitter:description" content="Junior Full-Stack Web Developer specializing in the MERN stack. Building practical, deployable applications." />
+    <meta property="twitter:image" content="https://oluwaseyi-abayomi.vercel.app/og-image.png" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://oluwaseyi-abayomi.vercel.app/" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.github.com" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Oluwaseyi Abayomi Emmanuel",
+      "jobTitle": "Junior Full-Stack Web Developer",
+      "url": "https://oluwaseyi-abayomi.vercel.app/",
+      "sameAs": [
+        "https://github.com/oluwaseyifunmi52",
+        "https://linkedin.com/in/oluwaseyi-abayomi"
+      ],
+      "knowsAbout": [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "JavaScript",
+        "TypeScript",
+        "REST APIs",
+        "JWT Authentication",
+        "MERN Stack"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ibadan",
+        "addressRegion": "Oyo State",
+        "addressCountry": "NG"
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

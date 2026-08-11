@@ -1,0 +1,112 @@
+/* =======================
+   FLOATING THEME TOGGLE
+   ========================== */
+
+.floating-theme-toggle {
+    position: fixed;
+    top: 100px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--line);
+    background: var(--panel);
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1050;
+    box-shadow: 0 4px 16px var(--shadow);
+    transition: all var(--transition-fast);
+    font-size: 20px;
+}
+
+.floating-theme-toggle:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    color: var(--accent);
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px rgba(255, 107, 26, 0.2);
+}
+
+.floating-theme-toggle:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.floating-theme-toggle svg {
+    transition: transform var(--transition-fast);
+}
+
+.floating-theme-toggle:hover svg {
+    transform: rotate(15deg);
+}
+
+/* Light Mode specific */
+[data-theme="light"] .floating-theme-toggle {
+    background: var(--bg);
+    border-color: var(--line);
+    color: var(--ink);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .floating-theme-toggle:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 8px 24px rgba(255, 107, 26, 0.15);
+}
+
+/* Dark Mode specific */
+[data-theme="dark"] .floating-theme-toggle {
+    background: var(--panel);
+    border-color: var(--line);
+    color: var(--ink);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .floating-theme-toggle:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 8px 24px rgba(255, 107, 26, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .floating-theme-toggle {
+        top: 80px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .floating-theme-toggle {
+        top: 72px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-theme-toggle {
+        top: 68px;
+        right: 12px;
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+}
+
+/* Ensure it doesn't cause horizontal overflow */
+@media (max-width: 360px) {
+    .floating-theme-toggle {
+        right: 8px;
+    }
+}

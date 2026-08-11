@@ -1,15 +1,14 @@
 import {
     FaEnvelope,
-    FaPhoneAlt,
     FaMapMarkerAlt,
+    FaGithub,
+    FaLinkedin,
 } from "react-icons/fa";
 
 import ContactForm from "./ContactForm";
-
 import "../styles/contact.css";
 
 export default function Contact() {
-
     return (
         <section id="contact" className="contact">
 
@@ -22,8 +21,8 @@ export default function Contact() {
                     <h2>Let's Work Together</h2>
 
                     <p>
-                        Have a project or opportunity? Feel free
-                        to contact me.
+                        Open to junior developer roles, graduate opportunities, freelance projects, and collaborations.
+                        Based in Ibadan, Nigeria — available for remote work worldwide.
                     </p>
 
                 </div>
@@ -38,18 +37,7 @@ export default function Contact() {
 
                             <div>
                                 <h4>Email</h4>
-                                <p>oluwaseyifunmioluwadami@email.com</p>
-                            </div>
-
-                        </div>
-
-                        <div className="info-box">
-
-                            <FaPhoneAlt />
-
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+234 708 464 0014</p>
+                                <p>oluwaseyifunmioluwadami@gmail.com</p>
                             </div>
 
                         </div>
@@ -60,7 +48,29 @@ export default function Contact() {
 
                             <div>
                                 <h4>Location</h4>
-                                <p>Nigeria</p>
+                                <p>Ibadan, Oyo State, Nigeria</p>
+                            </div>
+
+                        </div>
+
+                        <div className="info-box">
+
+                            <FaGithub />
+
+                            <div>
+                                <h4>GitHub</h4>
+                                <p>github.com/oluwaseyifunmi52</p>
+                            </div>
+
+                        </div>
+
+                        <div className="info-box">
+
+                            <FaLinkedin />
+
+                            <div>
+                                <h4>X</h4>
+                                <p>X (Twitter): @oluwaseyif41193</p>
                             </div>
 
                         </div>

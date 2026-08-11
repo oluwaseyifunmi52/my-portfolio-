@@ -1,22 +1,22 @@
-
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills";
-import Services from "../components/Services";
-import Stats from "../components/Stats";
+import WhatICanBuild from "../components/WhatICanBuild";
+import Projects from "../components/Projects";
+import DevelopmentApproach from "../components/DevelopmentApproach";
 import Experience from "../components/Experience";
 import Education from "../components/Education";
+import GitHub from "../components/GitHub";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
-import ThemeToggle from "../components/ThemeToggle";
-import Projects from "../components/Projects";
 import Sidebar from "../components/Sidebar";
+import TopNavbar from "../components/TopNavbar";
 
 export default function Home() {
     return (
         <>
-            <ThemeToggle />
+            <TopNavbar />
 
             <Sidebar />
 
@@ -27,15 +27,17 @@ export default function Home() {
 
                 <Skills />
 
-                <Services />
+                <WhatICanBuild />
 
                 <Projects />
 
-                <Stats />
+                <DevelopmentApproach />
 
                 <Experience />
 
                 <Education />
+
+                <GitHub />
 
                 <Contact />
 

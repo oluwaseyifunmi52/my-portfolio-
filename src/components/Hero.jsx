@@ -1,8 +1,8 @@
 import {
     FaGithub,
     FaLinkedin,
-    FaInstagram,
     FaEnvelope,
+    FaDownload,
 } from "react-icons/fa";
 
 import "../styles/hero.css";
@@ -14,52 +14,61 @@ export default function Hero() {
             <div className="hero-content">
 
                 <p className="hero-greeting">
-                    👋 Hello, I'm
+                    Hello, I'm
                 </p>
 
                 <h1>
-                    Oluwaseyi <span>Abayomi</span>
+                    Oluwaseyi <span>Abayomi Emmanuel</span>
                 </h1>
 
                 <h2>
-                    Full Stack Developer | Electrical &  Solar Installation Specialist
+                    Junior Full-Stack Web Developer <span className="divider">|</span> JavaScript / MERN Stack
                 </h2>
 
-                
-                    <p className="hero-description">
-                        I design and develop modern, responsive, and scalable web
-                        applications using React, Node.js, Express.js, MongoDB, and
-                        JavaScript. Beyond software development, I specialize in
-                        electrical engineering and solar energy solutions, combining
-                        technology and innovation to build reliable digital and
-                        real-world systems that solve everyday challenges.
-                    </p>
-                
+                <p className="hero-description">
+                    I build practical, full-stack web applications using React, Node.js, Express, and MongoDB.
+                    Currently pursuing a BSc in Computer Science (University of the People) with a Full-Stack Web Developer
+                    certificate from ClaspTek Coaching Limited. Open to remote and Ibadan-based opportunities.
+                </p>
+
+                <div className="hero-badges">
+                    <span className="badge">Junior Full-Stack Developer</span>
+                    <span className="badge">MERN Stack</span>
+                    <span className="badge">React & Node.js</span>
+                    <span className="badge">Open to Work</span>
+                </div>
 
                 <div className="hero-buttons">
                     <a
-                        href="#contact"
+                        href="#projects"
                         className="btn-primary"
                     >
-                        Hire Me
+                        View My Projects
+                    </a>
+
+                    <a
+                        href="https://github.com/oluwaseyifunmi52"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-secondary"
+                    >
+                        <FaGithub /> GitHub
+                    </a>
+
+                    <a
+                        href="#contact"
+                        className="btn-secondary"
+                    >
+                        Contact Me
                     </a>
 
                     <a
                         href="/Resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-secondary"
+                        className="btn-outline"
                     >
-                        View Software CV
-                    </a>
-
-                    <a
-                        href="/Resume solar.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn-secondary"
-                    >
-                        View Electrical & Solar CV
+                        <FaDownload /> Download CV
                     </a>
                 </div>
 
@@ -67,28 +76,22 @@ export default function Hero() {
                     <a
                         href="https://github.com/oluwaseyifunmi52"
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub"
                     >
                         <FaGithub />
                     </a>
 
-                    {/* <a
-                        href="https://linkedin.com/in/yourusername"
+                    <a
+                        href="https://X (Twitter): @oluwaseyif41193"
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
                     >
                         <FaLinkedin />
-                    </a> */}
+                    </a>
 
-                    {/* <a
-                        href="https://instagram.com/yourusername"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <FaInstagram />
-                    </a> */}
-
-                    <a href="mailto:oluwaseyifunmioluwadami@gmail.com">
+                    <a href="mailto:oluwaseyifunmioluwadami@gmail.com" aria-label="Email">
                         <FaEnvelope />
                     </a>
                 </div>
@@ -98,7 +101,7 @@ export default function Hero() {
             <div className="hero-image">
                 <img
                     src={profile}
-                    alt="Oluwaseyi Abayomi"
+                    alt="Oluwaseyi Abayomi Emmanuel"
                 />
             </div>
         </section>

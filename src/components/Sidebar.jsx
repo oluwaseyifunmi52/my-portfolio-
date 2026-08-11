@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaDownload } from "react-icons/fa";
 import "../styles/Sidebar.css";
 
 export default function Sidebar() {
@@ -8,24 +8,39 @@ export default function Sidebar() {
     const toggleMenu = () => setMenuOpen(!menuOpen);
     const closeMenu = () => setMenuOpen(false);
 
+    const navLinks = [
+        { href: "#home", label: "Home" },
+        { href: "#about", label: "About" },
+        { href: "#skills", label: "Skills" },
+        { href: "#what-i-can-build", label: "What I Can Build" },
+        { href: "#projects", label: "Projects" },
+        { href: "#development-approach", label: "Development Approach" },
+        { href: "#experience", label: "Experience" },
+        { href: "#education", label: "Education" },
+        { href: "#github", label: "GitHub" },
+        { href: "#contact", label: "Contact" },
+    ];
+
     return (
         <>
             <aside className={menuOpen ? "sidebar active" : "sidebar"}>
-
                 <div className="logo">
-                    <a href="#home">Oluwaseyi</a>
+                    <a href="#home" onClick={closeMenu}>Oluwaseyi</a>
                 </div>
 
-                <nav className="nav-links">
-                    <a href="#home" onClick={closeMenu}>Home</a>
-                    <a href="#about" onClick={closeMenu}>About</a>
-                    <a href="#skills" onClick={closeMenu}>Skills</a>
-                    <a href="#services" onClick={closeMenu}>Services</a>
-                    <a href="#projects" onClick={closeMenu}>Projects</a>
-                    <a href="#experience" onClick={closeMenu}>Experience</a>
-                    <a href="#education" onClick={closeMenu}>Education</a>
-                    <a href="#contact" onClick={closeMenu}>Contact</a>
+                <nav className="sidebar-nav" role="navigation" aria-label="Main navigation">
+                    <ul className="sidebar-nav-list">
+                        {navLinks.map((link) => (
+                            <li key={link.href}>
+                                <a href={link.href} onClick={closeMenu}>
+                                    {link.label}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
 
+                <div className="sidebar-bottom">
                     <a
                         href="/Resume.pdf"
                         target="_blank"
@@ -33,20 +48,9 @@ export default function Sidebar() {
                         className="resume-btn"
                         onClick={closeMenu}
                     >
-                        View Software CV
+                        <FaDownload /> Download CV
                     </a>
-
-                    <a
-                        href="/Resume solar.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="resume-btn"
-                        onClick={closeMenu}
-                    >
-                        View Electrical & Solar CV
-                    </a>
-                </nav>
-
+                </div>
             </aside>
 
             <div className="menu-icon" onClick={toggleMenu}>

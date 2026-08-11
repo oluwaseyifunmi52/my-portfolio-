@@ -1,66 +1,81 @@
 import "../styles/experience.css";
 
-
-    const experiences = [
+const experiences = [
     {
-        role: "Full Stack Developer",
-        company: "Royal Higher Life Ministries",
-        duration: "2026 - Present",
-        description:
-            "Designed and developed a full-stack church management platform using React, Node.js, Express.js, and MongoDB. Implemented secure authentication, online donations, event management, sermon uploads, Cloudinary integration, email notifications, and an administrative dashboard with role-based access control.",
+        role: "Full-Stack Web Developer (Project-Based)",
+        company: "Self-Directed / Freelance",
+        duration: "2025 — Present",
+        location: "Ibadan, Nigeria (Remote)",
+        description: [
+            "Built and deployed 4+ full-stack MERN applications with authentication, role-based access, and production deployments on Vercel/Render.",
+            "Designed REST APIs with Express.js, MongoDB/Mongoose, and PostgreSQL — including pagination, search, and JWT/refresh-token authentication.",
+            "Implemented RBAC systems for multi-user platforms (students, teachers, parents, admins; patients, doctors, admins).",
+            "Debugged and resolved CORS issues, deployment environment mismatches, and API integration challenges.",
+            "Applied MVC architecture, middleware patterns, and error-handling strategies across backend services.",
+        ],
+        technologies: ["React", "Node.js", "Express.js", "MongoDB", "Mongoose", "PostgreSQL", "JWT", "Vercel", "Render"],
     },
-
     {
-        role: "MERN Stack Developer",
-        company: "Online Voting System",
-        duration: "2026",
-        description:
-            "Developed a secure online voting application with React, Express.js, MongoDB Atlas, and JWT authentication. Built election management features, vote tracking, candidate management, and an intuitive administrative dashboard.",
+        role: "Full-Stack Web Developer Certificate",
+        company: "ClaspTek Coaching Limited",
+        duration: "2025 — 2026",
+        location: "Nigeria",
+        description: [
+            "Completed intensive full-stack web development training covering HTML5, CSS3, JavaScript (ES6+), React, Node.js, Express.js, MongoDB, Git, and GitHub.",
+            "Built multiple capstone projects including REST APIs, authenticated applications, and deployed full-stack solutions.",
+            "Learned modern development practices: component-based architecture, state management, API design, database modeling, and deployment workflows.",
+        ],
+        technologies: ["HTML5", "CSS3", "JavaScript", "React", "Node.js", "Express.js", "MongoDB", "Git", "GitHub"],
     },
-
     {
-        role: "Frontend Developer",
-        company: "Personal Portfolio Website",
-        duration: "2026",
-        description:
-            "Designed and built a modern portfolio website showcasing my software engineering projects, technical skills, education, and professional experience using React, JavaScript, CSS, and responsive design principles.",
+        role: "BSc Computer Science (In Progress)",
+        company: "University of the People",
+        duration: "2026 — Present",
+        location: "Online (Remote)",
+        description: [
+            "Studying software engineering, web development, database systems, networking, operating systems, data structures, algorithms, and modern programming concepts.",
+            "Applying academic concepts directly to real-world project development.",
+        ],
+        technologies: ["Data Structures", "Algorithms", "Database Systems", "Networking", "Operating Systems"],
     },
-
     {
         role: "Electrical & Electronics Technician",
         company: "Independent / Contract Projects",
-        duration: "2016 - Present",
-        description:
-            "Installed, maintained, and repaired residential and commercial electrical systems, including electrical wiring, distribution boards, lighting systems, fault diagnosis, preventive maintenance, and electrical safety compliance.",
+        duration: "2016 — 2024",
+        location: "Ibadan, Nigeria",
+        description: [
+            "Installed, maintained, and repaired residential and commercial electrical systems — wiring, distribution boards, lighting, fault diagnosis, preventive maintenance, and safety compliance.",
+            "Developed systematic troubleshooting methodology: isolate variables, trace root causes, implement fixes, verify results — directly transferable to software debugging.",
+            "Managed client communication, project planning, and on-site delivery for electrical installations.",
+        ],
+        technologies: ["Electrical Systems", "Fault Diagnosis", "Preventive Maintenance", "Safety Compliance", "Client Management"],
     },
-
     {
         role: "Solar Installation Specialist",
         company: "Renewable Energy Projects",
-        duration: "2018 - Present",
-        description:
-            "Designed and installed solar power systems, inverters, lithium battery banks, charge controllers, and backup power solutions for homes and businesses. Performed system testing, troubleshooting, maintenance, and energy optimization.",
+        duration: "2016 — 2024",
+        location: "Ibadan, Nigeria",
+        description: [
+            "Designed and installed solar PV systems, inverters, lithium battery banks, charge controllers, and backup power solutions for homes and businesses.",
+            "Performed system testing, troubleshooting, maintenance, and energy optimization.",
+            "Applied precision, safety standards, and quality workmanship — habits that now inform code quality and deployment reliability.",
+        ],
+        technologies: ["Solar PV", "Inverters", "Battery Systems", "Energy Optimization", "System Testing"],
     },
 ];
-
 
 export default function Experience() {
     return (
         <section id="experience" className="experience">
             <div className="container">
 
-              
                 <div className="section-title">
                     <h5>EXPERIENCE</h5>
-
-                    <h2>Professional Experience</h2>
-
+                    <h2>Professional Journey</h2>
                     <p>
-                        My experience combines software engineering, electrical engineering,
-                        and renewable energy solutions. Through hands-on projects and
-                        continuous learning, I have developed the technical expertise to
-                        build modern web applications, reliable electrical systems, and
-                        efficient solar power solutions that solve real-world problems.
+                        My experience combines hands-on full-stack development with 8+ years of technical field work.
+                        The discipline, troubleshooting mindset, and client-facing experience from electrical and solar
+                        engineering directly strengthen how I build software today.
                     </p>
                 </div>
 
@@ -74,114 +89,26 @@ export default function Experience() {
 
                                 <h3>{exp.role}</h3>
 
-                                <h4>{exp.company}</h4>
+                                <h4>
+                                    {exp.company}
+                                    {exp.location && <span className="location"> • {exp.location}</span>}
+                                </h4>
 
-                                <p>{exp.description}</p>
+                                <ul className="experience-details">
+                                    {exp.description.map((item, i) => (
+                                        <li key={i}>{item}</li>
+                                    ))}
+                                </ul>
+
+                                <div className="experience-tech">
+                                    {exp.technologies.map((tech, i) => (
+                                        <span key={i} className="tech-tag">{tech}</span>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     ))}
                 </div>
-
-              
-                <div className="section-title" style={{ marginTop: "80px" }}>
-                    
-                    <h2>Challenges & Lessons Learned</h2>
-
-                    <p>
-                        Every project has been an opportunity to learn, improve,
-                        and become a better developer. The challenges I've faced
-                        have strengthened my technical skills, problem-solving
-                        abilities, and confidence in building modern web
-                        applications.
-                    </p>
-                </div>
-
-                <div className="journey-grid">
-
-                    <div className="journey-card">
-                        <h3>💻 Frontend & Backend Integration</h3>
-                        <p>
-                            Successfully connected React applications with
-                            Express.js APIs while managing authentication,
-                            routing, state management, and data flow between
-                            frontend and backend.
-                        </p>
-                    </div>
-
-                    <div className="journey-card">
-                        <h3>🗄️ Database & API Development</h3>
-                        <p>
-                            Built RESTful APIs, integrated MongoDB Atlas,
-                            implemented JWT authentication, and learned how to
-                            design secure and scalable backend systems.
-                        </p>
-                    </div>
-
-                    <div className="journey-card">
-                        <h3>🚀 Deployment & DevOps</h3>
-                        <p>
-                            Deployed applications using Vercel and Render while
-                            solving CORS issues, configuring environment
-                            variables, and optimizing production builds.
-                        </p>
-                    </div>
-
-                    <div className="journey-card">
-                        <h3>📚 Continuous Learning</h3>
-                        <p>
-                            Continuously improving my skills by learning modern
-                            technologies, exploring best practices, and building
-                            real-world projects that strengthen my experience as
-                            a Full Stack Developer.
-                        </p>
-                    </div>
-
-                    <div className="journey-card">
-                           <h3>⚡ Electrical & Solar Projects</h3>
-
-                         <p>
-                             Working on electrical installations and solar energy systems
-                              strengthened my practical problem-solving skills, attention to
-                              detail, safety awareness, and ability to deliver dependable
-                             engineering solutions for residential and commercial clients.
-                         </p>
-                    </div>
-                    
-                    <div className="journey-card">
-                       <h3>🤝 Client Communication</h3>
-
-                        <p>
-                       Collaborating with clients and understanding their requirements
-                       has improved my communication, project planning, and ability to
-                       deliver solutions that meet both technical and business needs.
-                       </p>
-                    </div>
-                </div>
-
-                <div className="lessons">
-                    <h2>Key Lessons Learned</h2>
-
-                    <ul>
-                        <li>✔ Continuous learning is the foundation of success in software development, electrical engineering, and renewable energy.</li>
-
-                        <li>✔ Writing clean, maintainable, and scalable code leads to reliable software solutions and easier long-term maintenance.</li>
-
-                        <li>✔ Effective debugging and analytical thinking are essential for solving complex software bugs as well as electrical and solar system faults.</li>
-
-                        <li>✔ Security, performance, and reliability should be prioritized when developing web applications and designing electrical systems.</li>
-
-                        <li>✔ Safety standards, precision, and quality workmanship are critical in every electrical installation and solar energy project.</li>
-
-                        <li>✔ Understanding client requirements and maintaining clear communication helps deliver successful software, electrical, and renewable energy solutions.</li>
-
-                        <li>✔ Teamwork, collaboration, and continuous improvement are key to delivering projects efficiently and professionally.</li>
-
-                        <li>✔ Combining software engineering with electrical and solar expertise creates innovative solutions that solve real-world challenges.</li>
-
-                        <li>✔ Every project—whether a web application, electrical installation, or solar power system—is an opportunity to learn, grow, and improve professionally.</li>
-                    </ul>
-                </div>
-               
 
             </div>
         </section>

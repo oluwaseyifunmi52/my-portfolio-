@@ -1,6 +1,6 @@
 import "../styles/about.css";
-import profile from "../assets/dammy.jpeg";
-import {FaDownload} from "react-icons/fa";
+import profile from "../assets/dammy2.jpeg";
+import { FaDownload, FaGithub, FaEnvelope } from "react-icons/fa";
 
 export default function About() {
     return (
@@ -10,7 +10,7 @@ export default function About() {
                 <div className="about-image">
                     <img
                         src={profile}
-                        alt="Oluwaseyi Abayomi"
+                        alt="Oluwaseyi Abayomi Emmanuel"
                     />
                 </div>
 
@@ -19,50 +19,52 @@ export default function About() {
                     <h5>ABOUT ME</h5>
 
                     <h2>
-                        Full Stack Developer | Electrical & Solar Installation Specialist
+                        Junior Full-Stack Developer Building Real Applications
                     </h2>
+
                     <p>
-                        I'm <strong>Oluwaseyi Abayomi</strong>, a passionate
-                        <strong> Full Stack Developer</strong>,
-                        <strong> Electrical & </strong>, and
-                        <strong> Solar Installation Specialist</strong> dedicated to creating
-                        innovative digital products and reliable engineering solutions. I enjoy
-                        transforming ideas into <strong>practical, user-friendly applications</strong>
-                        while delivering dependable <strong>electrical</strong> and
-                        <strong> renewable energy solutions</strong> that solve real-world problems.
+                        I'm <strong>Oluwaseyi Abayomi Emmanuel</strong>, a junior full-stack web developer based in
+                        Ibadan, Nigeria. I build practical web applications using the MERN stack — React, Node.js,
+                        Express, and MongoDB — with a focus on clean code, secure authentication, and deployable
+                        solutions.
                     </p>
 
                     <p>
-                        My expertise spans the entire <strong>software development lifecycle</strong>—from
-                        designing beautiful, responsive user interfaces with
-                        <strong> React</strong> to building secure, scalable backend applications using
-                        <strong> Node.js</strong>, <strong>Express.js</strong>, and
-                        <strong> MongoDB</strong>. Alongside software development, I have hands-on
-                        experience in <strong>electrical installations</strong>,
-                        <strong> solar energy systems</strong>,
-                        <strong> inverter installations</strong>,
-                        <strong> maintenance</strong>,
-                        <strong> troubleshooting</strong>, and
-                        <strong> renewable energy solutions</strong>.
+                        My path to software development wasn't traditional. Before writing code full-time, I spent
+                        <strong>8+ years</strong> as an electrical and solar installation technician — wiring homes,
+                        installing solar PV systems, diagnosing faults, and maintaining power systems for residential
+                        and commercial clients.
                     </p>
 
                     <p>
-                        I believe <strong>technology and engineering</strong> work best when they
-                        improve everyday life. Whether I'm developing a
-                        <strong> modern web application</strong>, installing a
-                        <strong> solar power system</strong>, or solving
-                        <strong> complex technical challenges</strong>, I focus on
-                        <strong> quality</strong>,
-                        <strong> innovation</strong>,
-                        <strong> continuous learning</strong>, and delivering
-                        <strong> impactful solutions</strong> for individuals and businesses.
+                        That experience taught me how to <strong>troubleshoot under pressure</strong>, follow
+                        <strong>technical procedures precisely</strong>, diagnose root causes systematically, and
+                        deliver <strong>reliable results that people depend on daily</strong>. Those same habits —
+                        attention to detail, logical problem-solving, safety-first thinking — now drive how I
+                        approach software: write tests, handle errors gracefully, secure data, and ship code that
+                        works in production.
+                    </p>
+
+                    <p>
+                        Since transitioning to development, I've completed a <strong>Full-Stack Web Developer
+                        certificate at ClaspTek Coaching Limited</strong> and am currently pursuing a <strong>BSc
+                        in Computer Science at the University of the People</strong>. I've built and deployed
+                        multiple full-stack applications including a school management platform, a hospital
+                        management system, a voting application, and several backend APIs — all live and
+                        accessible.
+                    </p>
+
+                    <p>
+                        I'm <strong>open to junior full-stack, frontend, and backend roles</strong> (remote or
+                        Ibadan-based), graduate programs, and freelance projects. I learn fast, communicate
+                        clearly, and take ownership of the problems I solve.
                     </p>
 
                     <div className="about-info">
 
                         <div>
                             <span>Name</span>
-                            <p>Oluwaseyi Abayomi</p>
+                            <p>Oluwaseyi Abayomi Emmanuel</p>
                         </div>
 
                         <div>
@@ -72,30 +74,63 @@ export default function About() {
 
                         <div>
                             <span>Location</span>
-                            <p>Nigeria</p>
+                            <p>Ibadan, Oyo State, Nigeria</p>
                         </div>
 
                         <div>
-                            <span>Specialization</span>
-                            <p>
-                                Full Stack Development, Electrical & Solar Energy
-                            </p>
+                            <span>Focus</span>
+                            <p>MERN Stack • React • Node.js • MongoDB</p>
+                        </div>
+
+                        <div>
+                            <span>Education</span>
+                            <p>BSc Computer Science (in progress)</p>
+                        </div>
+
+                        <div>
+                            <span>Certification</span>
+                            <p>Full-Stack Web Developer — ClaspTek</p>
                         </div>
 
                     </div>
 
-                     <div className="about-buttons">
-                        <a href="#contact" className="primary-btn">
-                            Hire Me
+                    <div className="about-buttons">
+                        <a
+                            href="#projects"
+                            className="btn-primary"
+                        >
+                            View My Projects
                         </a>
-                       
-                
-                    </div> 
 
-                </div> 
+                        <a
+                            href="https://github.com/oluwaseyifunmi52"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-secondary"
+                        >
+                            <FaGithub /> GitHub
+                        </a>
 
-            </div> 
+                        <a
+                            href="/Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-outline"
+                        >
+                            <FaDownload /> Download CV
+                        </a>
 
+                        <a
+                            href="mailto:oluwaseyifunmioluwadami@gmail.com"
+                            className="btn-outline"
+                        >
+                            <FaEnvelope /> Hire Me
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
         </section>
     );
 }

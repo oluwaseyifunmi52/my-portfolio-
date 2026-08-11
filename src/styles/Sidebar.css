@@ -1,13 +1,13 @@
 /* =======================
-   SIDEBAR
-========================== */
+   SIDEBAR (Brand + Navigation)
+   ========================== */
 
 .sidebar {
     position: fixed;
-    top: 0;
+    top: 64px;
     left: 0;
     width: 280px;
-    height: 100vh;
+    height: calc(100vh - 64px);
 
     display: flex;
     flex-direction: column;
@@ -15,19 +15,16 @@
     padding: 35px 25px;
 
     background: var(--panel);
-
     border-right: 1px solid var(--line);
 
     overflow-y: auto;
-
     z-index: 1000;
 }
 
 /* Logo */
-
 .logo {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 }
 
 .logo a {
@@ -37,183 +34,130 @@
 }
 
 /* Navigation */
-
-.nav-links {
+.sidebar-nav {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-
-    flex: 1;
+    margin-bottom: 24px;
 }
 
-.nav-links a {
-
+.sidebar-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+}
 
-    height: 52px;
-
-    padding: 0 18px;
-
+.sidebar-nav-list a {
+    display: block;
+    padding: 14px 18px;
     border-radius: 10px;
-
+    font-size: 15px;
+    font-weight: 500;
     color: var(--ink-muted);
-
-    transition: .3s;
+    text-decoration: none;
+    transition: background var(--transition-fast), color var(--transition-fast), padding-left var(--transition-fast);
+    border: 1px solid transparent;
 }
 
-.nav-links a:hover {
-
-    background: rgba(255, 107, 26, .12);
-
+.sidebar-nav-list a:hover {
+    background: var(--accent-soft);
     color: var(--accent);
-
-    transform: translateX(8px);
-}
-
-.nav-links a.active {
-
-    background: var(--accent);
-
-    color: white;
-
-    font-weight: 600;
-
-    box-shadow: 0 10px 25px rgba(255, 107, 26, .25);
+    padding-left: 24px;
 }
 
 /* Bottom */
-
 .sidebar-bottom {
-
     margin-top: auto;
-
-    padding-top: 30px;
-
+    padding-top: 24px;
     border-top: 1px solid var(--line);
 }
 
 /* Resume */
-
 .resume-btn {
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
+    gap: 8px;
     height: 50px;
-
     background: var(--accent);
-
-    color: white;
-
+    color: var(--ink);
     border-radius: 10px;
-
     font-weight: 600;
-
-    transition: .3s;
+    transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .resume-btn:hover {
-
     background: var(--accent-deep);
-
     transform: translateY(-3px);
-}
-
-/* Social */
-
-.sidebar-social {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 15px;
-
-    margin-top: 25px;
-}
-
-.sidebar-social a {
-
-    width: 42px;
-
-    height: 42px;
-
-    border-radius: 50%;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    background: var(--bg-soft);
-
-    color: var(--ink-muted);
-
-    transition: .3s;
-}
-
-.sidebar-social a:hover {
-
-    background: var(--accent);
-
-    color: #fff;
-
-    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 107, 26, 0.25);
 }
 
 /* Scrollbar */
-
 .sidebar::-webkit-scrollbar {
-
     width: 6px;
 }
 
 .sidebar::-webkit-scrollbar-thumb {
-
     background: var(--accent);
-
     border-radius: 20px;
 }
 
-/* Mobile */
-
+/* Mobile - sidebar is hidden on mobile since we have top navbar */
 .menu-icon {
-
     display: none;
 }
 
-@media(max-width:900px) {
-
+@media (max-width: 900px) {
     .sidebar {
-
         left: -100%;
-        transition: .4s;
+        top: 56px;
+        height: calc(100vh - 56px);
+        transition: left .4s ease;
     }
 
     .sidebar.active {
-
         left: 0;
     }
 
     .menu-icon {
-
-        display: block;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: fixed;
-
         left: 20px;
-
-        top: 20px;
-
-        font-size: 28px;
-
+        top: 16px;
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
         color: var(--accent);
-
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 12px;
         z-index: 1200;
+        box-shadow: 0 8px 20px var(--shadow);
+        transition: border-color var(--transition-fast), background var(--transition-fast);
+    }
+
+    .menu-icon:hover {
+        border-color: var(--accent);
+        background: var(--accent-soft);
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        top: 56px;
+        height: calc(100vh - 56px);
+    }
+}
+
+/* Adjust for when there's no sidebar on mobile */
+@media (max-width: 900px) {
+    .main-content {
+        margin-left: 0;
+        width: 100%;
     }
 }
