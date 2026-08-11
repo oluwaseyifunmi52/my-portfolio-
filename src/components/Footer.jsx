@@ -35,7 +35,6 @@ export default function Footer() {
                             <h4>Resources</h4>
                             <ul>
                                 <li><a href="https://github.com/oluwaseyifunmi52" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                                <li><a href="https://linkedin.com/in/oluwaseyi-abayomi" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                                 <li><a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">Download CV</a></li>
                                 <li><a href="mailto:oluwaseyifunmioluwadami@gmail.com">Email Me</a></li>
                             </ul>
