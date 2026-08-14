@@ -1,11 +1,16 @@
 .skills {
-    padding: 80px 24px;
+    padding: 80px clamp(16px, 4vw, 24px);
     background: var(--bg);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .skills .container {
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .skills .section-title {
@@ -36,7 +41,7 @@
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 20px;
 }
 
@@ -50,6 +55,8 @@
     display: flex;
     flex-direction: column;
     min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .skill-card:hover {

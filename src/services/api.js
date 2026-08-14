@@ -1,4 +1,4 @@
-const BASE_URL = "https://my-portfolio-back-end-l6w2.onrender.com/api";
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 const TIMEOUT_MS = 60000; // 60s — covers Render free-tier cold starts
 

@@ -1,6 +1,9 @@
 .experience {
-    padding: 100px 10%;
+    padding: 100px clamp(16px, 4vw, 10%);
     background: var(--bg);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .experience .section-title {

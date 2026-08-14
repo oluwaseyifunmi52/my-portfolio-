@@ -1,11 +1,16 @@
 .github {
-    padding: 70px 24px;
+    padding: 70px clamp(16px, 4vw, 24px);
     background: var(--bg-soft);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .github .container {
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .github .section-title {
@@ -135,7 +140,7 @@
 
 .repos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 16px;
     margin-bottom: 24px;
 }

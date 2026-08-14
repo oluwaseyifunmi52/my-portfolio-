@@ -57,6 +57,7 @@
 
 html {
     scroll-behavior: smooth;
+    max-width: 100%;
 }
 
 body {
@@ -66,6 +67,13 @@ body {
     font-family: "Inter", sans-serif;
     -webkit-font-smoothing: antialiased;
     transition: background var(--transition-normal), color var(--transition-normal);
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#root {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 *,
@@ -81,6 +89,8 @@ a {
 
 h1, h2, h3, h4, h5 {
     color: var(--ink);
+    overflow-wrap: break-word;
+    word-break: normal;
 }
 
 h5 {
@@ -93,14 +103,19 @@ h5 {
 }
 
 .wrap {
+    width: 100%;
     max-width: 1080px;
     margin: 0 auto;
-    padding: 0 28px;
+    padding: 0 clamp(16px, 4vw, 28px);
+    box-sizing: border-box;
 }
 
 section {
+    width: 100%;
+    max-width: 100%;
     padding: 80px 0;
     border-top: 1px solid var(--line);
+    box-sizing: border-box;
 }
 
 .btn {
@@ -183,14 +198,12 @@ section {
     width: calc(100% - 280px);
     min-height: 100vh;
     overflow-x: hidden;
-    padding-top: 64px;
 }
 
 @media (max-width: 900px) {
     .main-content {
         margin-left: 0;
         width: 100%;
-        padding-top: 56px;
     }
 }
 
@@ -204,4 +217,98 @@ section {
 ::selection {
     background: var(--accent-soft);
     color: var(--ink);
+}
+
+/* =======================
+   SCROLL TO TOP BUTTON
+   ======================= */
+
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--line);
+    background: var(--panel);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1050;
+    box-shadow: 0 4px 16px var(--shadow);
+    transition: all var(--transition-fast);
+    font-size: 20px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(255, 107, 26, 0.2);
+}
+
+.scroll-top:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+    .scroll-top {
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-top {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+}
+
+/* Hide scroll to top when mobile sidebar is open */
+body.sidebar-open .scroll-top {
+    display: none;
+}
+
+/* =======================
+   GLOBAL RESPONSIVE UTILITIES
+   ======================= */
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Prevent horizontal overflow from long words */
+p, li, span, div {
+    overflow-wrap: break-word;
+    word-break: break-word;
 }

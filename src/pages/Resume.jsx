@@ -10,16 +10,6 @@ export default function Resume() {
                 title="Software CV"
             />
 
-            <h2 style={{ marginTop: "40px" }}>
-                Electrical & Solar CV
-            </h2>
-
-            <iframe
-                src="/Resume solar.pdf"
-                width="100%"
-                height="800"
-                title="Electrical CV"
-            />
         </div>
     );
 }

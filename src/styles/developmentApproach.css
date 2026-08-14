@@ -1,6 +1,9 @@
 .development-approach {
-    padding: 100px 10%;
+    padding: 100px clamp(16px, 4vw, 10%);
     background: var(--bg);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .development-approach .section-title {
@@ -31,7 +34,7 @@
 
 .approach-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 24px;
 }
 

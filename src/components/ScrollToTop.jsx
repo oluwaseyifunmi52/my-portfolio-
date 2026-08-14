@@ -26,15 +26,12 @@ export default function ScrollToTop() {
     };
 
     return (
-        <>
-            {showButton && (
-                <button
-                    className="scroll-top"
-                    onClick={scrollTop}
-                >
-                    <FaArrowUp />
-                </button>
-            )}
-        </>
+        <button
+            className={`scroll-top ${showButton ? "visible" : ""}`}
+            onClick={scrollTop}
+            aria-label="Scroll to top"
+        >
+            <FaArrowUp />
+        </button>
     );
 }

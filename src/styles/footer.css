@@ -1,8 +1,11 @@
 .footer {
     background: var(--bg);
     border-top: 1px solid var(--line);
-    padding: 60px 10% 30px;
+    padding: 60px clamp(16px, 4vw, 10%) 30px;
     color: var(--ink);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .footer-main {

@@ -4,7 +4,7 @@
 
 .floating-theme-toggle {
     position: fixed;
-    margin-top: 100px;
+    top: 100px;
     right: 14px;
     width: 48px;
     height: 48px;
@@ -109,4 +109,9 @@
     .floating-theme-toggle {
         right: 8px;
     }
+}
+
+/* Hide floating theme toggle when mobile sidebar is open */
+body.sidebar-open .floating-theme-toggle {
+    display: none;
 }

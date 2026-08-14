@@ -1,6 +1,14 @@
 import "../styles/about.css";
 import profile from "../assets/dammy2.jpeg";
-import { FaDownload, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaFilePdf, FaGithub, FaEnvelope } from "react-icons/fa";
+
+const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+    window.dispatchEvent(new CustomEvent("close-mobile-menus"));
+};
 
 export default function About() {
     return (
@@ -117,15 +125,16 @@ export default function About() {
                             rel="noopener noreferrer"
                             className="btn-outline"
                         >
-                            <FaDownload /> Download CV
+                            <FaFilePdf /> Open CV
                         </a>
 
-                        <a
-                            href="mailto:oluwaseyifunmioluwadami@gmail.com"
+                        <button
+                            type="button"
+                            onClick={scrollToContact}
                             className="btn-outline"
                         >
                             <FaEnvelope /> Hire Me
-                        </a>
+                        </button>
                     </div>
 
                 </div>

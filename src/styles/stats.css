@@ -1,7 +1,10 @@
 .stats {
-    padding: 80px 10%;
+    padding: 80px clamp(16px, 4vw, 10%);
     background: var(--bg);
     text-align: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .section-title {
@@ -11,7 +14,7 @@
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
     gap: 25px;
 }
 

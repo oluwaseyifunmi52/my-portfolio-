@@ -11,13 +11,10 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 import Sidebar from "../components/Sidebar";
-import TopNavbar from "../components/TopNavbar";
 
 export default function Home() {
     return (
         <>
-            <TopNavbar />
-
             <Sidebar />
 
             <main className="main-content">
