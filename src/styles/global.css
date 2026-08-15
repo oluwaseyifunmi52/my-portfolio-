@@ -193,19 +193,7 @@ section {
     outline-offset: 2px;
 }
 
-.main-content {
-    margin-left: 280px;
-    width: calc(100% - 280px);
-    min-height: 100vh;
-    overflow-x: hidden;
-}
 
-@media (max-width: 900px) {
-    .main-content {
-        margin-left: 0;
-        width: 100%;
-    }
-}
 
 /* Focus visible for accessibility */
 :focus-visible {

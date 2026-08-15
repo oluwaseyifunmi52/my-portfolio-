@@ -31,54 +31,6 @@ select {
 }
 
 /* =====================================================
-   MAIN CONTENT LAYOUT
-   ===================================================== */
-
-.main-content {
-    margin-left: 280px;
-    width: calc(100% - 280px);
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
-/* =====================================================
-   DESKTOP LARGE (>= 1400px)
-   ===================================================== */
-
-@media (min-width: 1400px) {
-    .main-content {
-        margin-left: 280px;
-        width: calc(100% - 280px);
-    }
-}
-
-/* =====================================================
-   TABLET / SMALL DESKTOP (901px - 1199px)
-   ===================================================== */
-
-@media (max-width: 1199px) {
-    .desktop-sidebar {
-        width: 240px;
-    }
-
-    .main-content {
-        margin-left: 240px;
-        width: calc(100% - 240px);
-    }
-}
-
-/* =====================================================
-   TABLET & MOBILE (<= 900px)
-   ===================================================== */
-
-@media (max-width: 900px) {
-    .main-content {
-        margin-left: 0;
-        width: 100%;
-    }
-}
-
-/* =====================================================
    GENERAL MOBILE TYPOGRAPHY (<= 767px)
    ===================================================== */
 
@@ -115,5 +67,49 @@ select {
 
     h2 {
         font-size: 1.5rem;
+    }
+}
+
+/* =====================================================
+   EXTRA SMALL MOBILE (<= 375px)
+   ===================================================== */
+
+@media (max-width: 375px) {
+    section {
+        padding: 55px 14px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+/* =====================================================
+   EXTRA SMALL MOBILE (<= 320px)
+   ===================================================== */
+
+@media (max-width: 320px) {
+    section {
+        padding: 50px 12px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 13px;
     }
 }

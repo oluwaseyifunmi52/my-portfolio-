@@ -9,39 +9,31 @@ import Education from "../components/Education";
 import GitHub from "../components/GitHub";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import ScrollToTop from "../components/ScrollToTop";
-import Sidebar from "../components/Sidebar";
 
 export default function Home() {
     return (
         <>
-            <Sidebar />
+            <Hero />
 
-            <main className="main-content">
-                <Hero />
+            <About />
 
-                <About />
+            <Skills />
 
-                <Skills />
+            <WhatICanBuild />
 
-                <WhatICanBuild />
+            <Projects />
 
-                <Projects />
+            <DevelopmentApproach />
 
-                <DevelopmentApproach />
+            <Experience />
 
-                <Experience />
+            <Education />
 
-                <Education />
+            <GitHub />
 
-                <GitHub />
+            <Contact />
 
-                <Contact />
-
-                <Footer />
-            </main>
-
-            <ScrollToTop />
+            <Footer />
         </>
     );
 }

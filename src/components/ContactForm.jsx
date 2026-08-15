@@ -12,6 +12,7 @@ export default function ContactForm() {
     const [errors, setErrors] = useState({});
     const [status, setStatus] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
 
     const validateForm = () => {
         const newErrors = {};
@@ -48,6 +49,7 @@ export default function ContactForm() {
         }
         if (status) {
             setStatus(null);
+            setErrorMessage("");
         }
     };
 
@@ -61,13 +63,15 @@ export default function ContactForm() {
         try {
             setLoading(true);
             setStatus(null);
+            setErrorMessage("");
 
             await sendMessage(formData);
 
             setStatus("success");
             setFormData({ name: "", email: "", subject: "", message: "" });
-        } catch {
+        } catch (error) {
             setStatus("error");
+            setErrorMessage(error.message || "Sorry, your message could not be sent right now. Please try again or email me directly.");
         } finally {
             setLoading(false);
         }
@@ -167,8 +171,10 @@ export default function ContactForm() {
 
             {status === "error" && (
                 <div className="form-status error" role="alert">
-                    Sorry, your message could not be sent right now. Please try again or email me directly at
-                    <a href="mailto:oluwaseyifunmioluwadami@gmail.com">oluwaseyifunmioluwadami@gmail.com</a>
+                    {errorMessage || "Sorry, your message could not be sent right now. Please try again or email me directly at "}
+                    {errorMessage ? null : (
+                        <a href="mailto:oluwaseyifunmioluwadami@gmail.com">oluwaseyifunmioluwadami@gmail.com</a>
+                    )}
                 </div>
             )}
 
