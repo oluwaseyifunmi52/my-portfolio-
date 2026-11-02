@@ -32,9 +32,9 @@ export default function About() {
 
                     <p>
                         I'm <strong>Oluwaseyi Abayomi Emmanuel</strong>, a junior full-stack web developer based in
-                        Ibadan, Nigeria. I build practical web applications using the MERN stack — React, Node.js,
-                        Express, and MongoDB — with a focus on clean code, secure authentication, and deployable
-                        solutions.
+                        Ibadan, Nigeria. I build practical web applications with React.js and Next.js, and full-stack
+                        applications using the MERN stack — React, Node.js, Express, and MongoDB — with a focus on
+                        clean code, secure authentication, and deployable solutions.
                     </p>
 
                     <p>
@@ -87,7 +87,7 @@ export default function About() {
 
                         <div>
                             <span>Focus</span>
-                            <p>MERN Stack • React • Node.js • MongoDB</p>
+                            <p>MERN Stack • React.js • Next.js • TypeScript • Node.js • MongoDB</p>
                         </div>
 
                         <div>

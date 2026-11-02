@@ -14,7 +14,8 @@ export default function Footer() {
                     <div className="footer-brand">
                         <h2>Oluwaseyi Abayomi Emmanuel</h2>
                         <p>
-                            Junior Full-Stack Web Developer • MERN Stack • Building practical, deployable applications.
+                            Junior Full-Stack Web Developer • React.js • Next.js • TypeScript • Node.js
+                            • Building practical, deployable applications.
                         </p>
                     </div>
 

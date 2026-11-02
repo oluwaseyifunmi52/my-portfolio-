@@ -3,6 +3,7 @@ import {
     FaLinkedin,
     FaEnvelope,
     FaDownload,
+    FaExternalLinkAlt,
 } from "react-icons/fa";
 
 import "../styles/hero.css";
@@ -17,47 +18,50 @@ export default function Hero() {
                     Hello, I'm
                 </p>
 
-                <h1>
+                <h1 className="display">
                     Oluwaseyi <span>Abayomi Emmanuel</span>
                 </h1>
 
                 <h2>
-                    Junior Full-Stack Web Developer <span className="divider">|</span> JavaScript / MERN Stack
+                    Junior Full-Stack Web Developer
+                    <span className="divider" aria-hidden="true">|</span>
+                    React.js • Next.js • TypeScript • Node.js
                 </h2>
 
                 <p className="hero-description">
-                    I build practical, full-stack web applications using React, Node.js, Express, and MongoDB.
+                    I build practical web applications with React.js and Next.js, alongside full-stack development
+                    using Node.js, Express, and MongoDB.
                     Currently pursuing a BSc in Computer Science (University of the People) with a Full-Stack Web Developer
                     certificate from ClaspTek Coaching Limited. Open to remote and Ibadan-based opportunities.
                 </p>
 
-                <div className="hero-badges">
+                <div className="hero-badges" aria-label="Key focus areas">
                     <span className="badge">Junior Full-Stack Developer</span>
                     <span className="badge">MERN Stack</span>
-                    <span className="badge">React & Node.js</span>
                     <span className="badge">Open to Work</span>
                 </div>
 
                 <div className="hero-buttons">
                     <a
                         href="#projects"
-                        className="btn-primary"
+                        className="btn btn-primary"
                     >
                         View My Projects
+                        <FaExternalLinkAlt aria-hidden="true" />
                     </a>
 
                     <a
                         href="https://github.com/oluwaseyifunmi52"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-secondary"
+                        className="btn btn-secondary"
                     >
-                        <FaGithub /> GitHub
+                        <FaGithub aria-hidden="true" /> GitHub
                     </a>
 
                     <a
                         href="#contact"
-                        className="btn-secondary"
+                        className="btn btn-secondary"
                     >
                         Contact Me
                     </a>
@@ -66,42 +70,48 @@ export default function Hero() {
                         href="/Resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-outline"
+                        className="btn btn-outline"
                     >
-                        <FaDownload /> Download CV
+                        <FaDownload aria-hidden="true" /> Download CV
                     </a>
                 </div>
 
-                <div className="hero-socials">
+                <div className="hero-socials" role="list" aria-label="Social links">
                     <a
                         href="https://github.com/oluwaseyifunmi52"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="GitHub"
+                        role="listitem"
                     >
                         <FaGithub />
                     </a>
 
                     <a
-                        href="https://X (Twitter): @oluwaseyif41193"
+                        href="https://linkedin.com/in/oluwaseyi-abayomi"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="LinkedIn"
+                        role="listitem"
                     >
                         <FaLinkedin />
                     </a>
 
-                    <a href="mailto:oluwaseyifunmioluwadami@gmail.com" aria-label="Email">
+                    <a
+                        href="mailto:oluwaseyifunmioluwadami@gmail.com"
+                        aria-label="Email"
+                        role="listitem"
+                    >
                         <FaEnvelope />
                     </a>
                 </div>
 
             </div>
 
-            <div className="hero-image">
+            <div className="hero-image" aria-hidden="true">
                 <img
                     src={profile}
-                    alt="Oluwaseyi Abayomi Emmanuel"
+                    alt=""
                 />
             </div>
         </section>

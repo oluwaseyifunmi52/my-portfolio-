@@ -32,7 +32,9 @@ import {
     SiVercel,
     SiLinux,
     SiNpm,
+    SiNextdotjs,
 } from "react-icons/si";
+
 
 import "../styles/skills.css";
 
@@ -44,7 +46,8 @@ const skills = [
             { icon: <FaCss3Alt />, name: "CSS3" },
             { icon: <FaJs />, name: "JavaScript" },
             { icon: <SiTypescript />, name: "TypeScript" },
-            { icon: <FaReact />, name: "React" },
+            { icon: <FaReact />, name: "React.js" },
+            { icon: <SiNextdotjs />, name: "Next.js" },
             { icon: <SiVite />, name: "Vite" },
             { icon: <SiTailwindcss />, name: "Tailwind CSS" },
         ],
@@ -55,6 +58,7 @@ const skills = [
             { icon: <FaNodeJs />, name: "Node.js" },
             { icon: <SiExpress />, name: "Express.js" },
             { icon: <FaNetworkWired />, name: "REST APIs" },
+            { icon: <SiNextdotjs />, name: "Next.js" },
         ],
     },
     {
